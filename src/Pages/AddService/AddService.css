@@ -1,0 +1,21 @@
+.handleForm form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.handleForm form input,
+textarea {
+    padding: 10px;
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+.input-btn {
+    background-color: #0E101C;
+    color: #fff;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
