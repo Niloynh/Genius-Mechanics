@@ -10,16 +10,16 @@ const Header = () => {
         <>
             <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg" >
                 <Container>
-                    <Navbar.Brand href="#home">Genius</Navbar.Brand>
+                    <Navbar.Brand href="#home">Genius <span className="text-info">Mechanics</span></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
-                        <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
-                        <Nav.Link as={HashLink} to="/addService">AddServices</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home#experts">Experts</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home#home" className="text-info">Home</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home#services" className="text-info">Services</Nav.Link>
+                        <Nav.Link as={HashLink} to="/addService" className="text-info">AddServices</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home#experts" className="text-info">Experts</Nav.Link>
                         {user?.email ?
-                            <Button onClick={logOut} variant="light">Logout</Button> :
-                            <Nav.Link as={Link} to="/login">Login</Nav.Link>}
+                            <Button onClick={logOut} variant="light" className="text-info">Logout</Button> :
+                            <Nav.Link as={Link} to="/login" className="text-info">Login</Nav.Link>}
                         <Navbar.Text>
                             Signed in as: <a href="#login">{user?.displayName}</a>
                         </Navbar.Text>
