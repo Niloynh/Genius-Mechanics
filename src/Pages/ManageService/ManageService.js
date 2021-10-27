@@ -4,12 +4,12 @@ const ManageService = () => {
     const [services, setServices] = useState([])
 
     useEffect(() => {
-        fetch('./services.json')
+        fetch('https://mighty-castle-05601.herokuapp.com/services')
         .then(res =>  res.json())
         .then(data => setServices(data))
     },[])
     const handleDelete = id => {
-        fetch(`http://localhost:5000/services/${id}`, {
+        fetch(`https://mighty-castle-05601.herokuapp.com/services/${id}`, {
             method:'DELETE'
         })
         .then(res => res.json())

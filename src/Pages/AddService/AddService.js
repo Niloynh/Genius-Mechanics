@@ -9,7 +9,7 @@ const AddService = () => {
     const onSubmit = data => {
         console.log(data);
         
-        axios.post('./services.json', data)
+        axios.post('https://mighty-castle-05601.herokuapp.com/services', data)
         .then(res => {
             if(res.data.insertedId){
                 alert('added successfully')
